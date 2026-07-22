@@ -55,7 +55,7 @@ class WorldMap:
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
             for level in self.levels:
-                if level.unlocked and level.is_clicked(event.pos):
+                if level.unlocked and level.clicked(event.pos):
                     return level.number
 
     def complete_level(self, number):
