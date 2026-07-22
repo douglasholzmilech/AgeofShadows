@@ -22,7 +22,7 @@ class Menu:
             "SCORE": pygame.Rect(x, y + 42, button_width, button_height),
             "LOAD": pygame.Rect(x, y + 84, button_width, button_height),
             "CONTROLS": pygame.Rect(x, y + 126, button_width, button_height),
-            "CREDITS": pygame.Rect(x, y + 168, button_width, button_height),
+            "STORE": pygame.Rect(x, y + 168, button_width, button_height),
             "EXIT": pygame.Rect(x, y + 210, button_width, button_height)
         }
 
