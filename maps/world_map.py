@@ -18,30 +18,33 @@ class WorldMap:
 
         self.levels = [
 
-            LevelNode(1, 80, 500),
-            LevelNode(2, 180, 460),
-            LevelNode(3, 300, 420),
-            LevelNode(4, 430, 390),
-            LevelNode(5, 560, 340),
+            LevelNode(1, 120, 450),
+            LevelNode(2, 250, 430),
+            LevelNode(3, 450, 450),
+            LevelNode(4, 400, 380),
+            LevelNode(5, 335, 330),
 
-            LevelNode(6, 700, 300),
-            LevelNode(7, 650, 220),
-            LevelNode(8, 540, 170),
-            LevelNode(9, 420, 150),
-            LevelNode(10, 300, 180),
+            LevelNode(6, 228, 320),
+            LevelNode(7, 100, 220),
+            LevelNode(8, 300, 140),
+            LevelNode(9, 360, 180),
+            LevelNode(10, 500, 220),
 
-            LevelNode(11, 180, 220),
-            LevelNode(12, 100, 300),
-            LevelNode(13, 180, 370),
-            LevelNode(14, 320, 320),
-            LevelNode(15, 450, 280),
+            LevelNode(11, 440, 270),
+            LevelNode(12, 500, 330),
+            LevelNode(13, 520, 390),
+            LevelNode(14, 650, 330),
+            LevelNode(15, 720, 230),
 
-            LevelNode(16, 600, 420),
-            LevelNode(17, 500, 520),
-            LevelNode(18, 350, 540),
-            LevelNode(19, 200, 520),
-            LevelNode(20, 700, 520),
+            LevelNode(16, 620, 110),
+            LevelNode(17, 500, 120),
+            LevelNode(18, 610, 180),
+            LevelNode(19, 560, 260),
+            LevelNode(20, 600, 300),
         ]
+
+    def update(self):
+        pass
 
     def draw(self):
 

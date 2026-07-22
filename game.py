@@ -1,6 +1,7 @@
 import pygame
 from ui.menu import Menu
 from maps.world import World
+from maps.world_map import WorldMap
 
 class Game:
     def __init__(self):
@@ -16,7 +17,7 @@ class Game:
         self.menu = Menu(self.screen)
 
         # mapa
-        self.world = World(self.screen)
+        self.world = WorldMap(self.screen)
 
 
     def run(self):
