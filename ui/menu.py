@@ -15,7 +15,7 @@ class Menu:
         )
         button_width = 140
         button_height = 35
-        x = (self.screen.get_width() - button_width) // 2
+        x = (self.screen.get_width() - button_width) // 8
         y = 220
         self.buttons = {
             "PLAY": pygame.Rect(x, y, button_width, button_height),

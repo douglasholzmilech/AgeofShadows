@@ -1,9 +1,11 @@
 import pygame
 from ui.menu import Menu
+from maps.world import World
 
 class Game:
     def __init__(self):
-        self.screen = pygame.display.set_mode((800, 600))
+
+        self.screen = pygame.display.set_mode((800,600))
         pygame.display.set_caption("Age of Shadow")
 
         self.running = True
@@ -11,8 +13,10 @@ class Game:
 
         self.clock = pygame.time.Clock()
 
-        # Cria o menu apenas uma vez
         self.menu = Menu(self.screen)
+
+        # mapa
+        self.world = World(self.screen)
 
 
     def run(self):
@@ -55,26 +59,28 @@ class Game:
 
             self.clock.tick(60)
 
-
-
     def game_loop(self):
 
-        for event in pygame.event.get():
+        while self.state == "game" and self.running:
 
-            if event.type == pygame.QUIT:
-                self.running = False
+            for event in pygame.event.get():
 
+                if event.type == pygame.QUIT:
+                    self.running = False
 
-        self.screen.fill((50, 50, 50))
+                if event.type == pygame.KEYDOWN:
 
+                    if event.key == pygame.K_ESCAPE:
+                        self.state = "menu"
+                        return
 
-        # Aqui entra seu jogo:
-        # player.update()
-        # enemy.update()
-        # colisões...
+            self.world.update()
 
+            self.world.draw()
 
-        pygame.display.update()
+            pygame.display.update()
+
+            self.clock.tick(60)
 
 
 
